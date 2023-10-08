@@ -1,13 +1,13 @@
 import React from 'react';
-import  ReactDOM  from 'react-dom';
+import ReactDOM from 'react-dom';
 
-//complete this function using portals
-const PortalTextArea=({text})=>{
-    return (
-        <div>
-            <textarea id="textarea" value={text} readOnly></textarea>
-        </div>
-    )
-}
+const PortalTextArea = () => {
+  return ReactDOM.createPortal(
+    <div id="portal-textfield">
+      <textarea id="textarea" placeholder="Text will appear here..."></textarea>
+    </div>,
+    document.getElementById('portal-textfield')
+  );
+};
+
 export default PortalTextArea;
-//portal-textarea id will be used here for portal purpose
