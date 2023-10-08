@@ -2,10 +2,10 @@ import React from 'react';
 import  ReactDOM  from 'react-dom';
 
 //complete this function using portals
-const PortalTextArea=()=>{
+const PortalTextArea=({text})=>{
     return (
         <div>
-            <textarea id="textarea" value={}></textarea>
+            <textarea id="textarea" value={text} readOnly></textarea>
         </div>
     )
 }
