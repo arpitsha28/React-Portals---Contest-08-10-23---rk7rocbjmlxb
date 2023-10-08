@@ -1,3 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import '../styles/App.css';
+import PortalButton from './PortalButton';
+import PortalTextArea from './PortalTextArea';
+
 const App = () => {
   return (
     <div id="root">
@@ -7,3 +13,5 @@ const App = () => {
     </div>
   );
 };
+
+export default App;
