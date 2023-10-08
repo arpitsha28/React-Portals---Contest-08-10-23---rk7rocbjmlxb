@@ -1,10 +1,10 @@
-import React from 'react';
+
 import ReactDOM from 'react-dom';
 
-const PortalTextArea = () => {
+const PortalTextArea = ({ textareaRef }) => {
   return ReactDOM.createPortal(
-    <div id="portal-textfield">
-      <textarea id="textarea" placeholder="Text will appear here..."></textarea>
+    <div>
+      <textarea id="textarea" ref={textareaRef} placeholder="Text will appear here..."></textarea>
     </div>,
     document.getElementById('portal-textfield')
   );
