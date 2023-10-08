@@ -1,22 +1,21 @@
 import React from 'react';
-import  ReactDOM  from 'react-dom';
+import ReactDOM from 'react-dom';
 
-//complete this function using portals
-const PortalButton = ({ onClick }) => {
-  const btnRef = useRef(null);
-
+const PortalButton = () => {
   const handleClick = () => {
-    const text = document.getElementById("input").value;
-    onClick(text);
+    const inputText = document.getElementById('input').value;
+    const textarea = document.getElementById('textarea');
+    if (textarea) {
+      textarea.value = inputText;
+    }
   };
+
   return ReactDOM.createPortal(
-    <button id="button" onClick={handleClick}>
-      Click
-    </button>,
-    btnRef.current
+    <div id="portal-button">
+      <button id="button" onClick={handleClick}>Click</button>
+    </div>,
+    document.getElementById('portal-button')
   );
 };
+
 export default PortalButton;
-
-
-//portal-button id will be used here for portal purpose
